@@ -279,7 +279,7 @@
             </a>
           </div>
           <p class="dl-note reveal">
-            First launch on a Mac: if macOS says Magpie is damaged or can't be opened, open Terminal, run <code>xattr -cr "/Applications/Magpie.app"</code> and open it again. Not sure which Mac you have? Choose  → About This Mac and look for "Chip".
+            First launch on a Mac: when macOS says it can't verify Magpie, click <b>Done</b>, then open <b>System Settings → Privacy &amp; Security</b>, scroll down and click <b>Open Anyway</b>. You only do this once. Not sure which Mac you have? Choose  → About This Mac and look for "Chip".
           </p>
         </div>
       </section>
@@ -317,9 +317,10 @@
               </div>
             </details>
             <details>
-              <summary>macOS says Magpie is damaged or can't be opened.<i aria-hidden="true"></i></summary>
+              <summary>macOS says it can't verify Magpie, or that it's damaged.<i aria-hidden="true"></i></summary>
               <div class="answer">
-                <p>That's macOS being careful with apps downloaded from the internet. Open Terminal, run <code>xattr -cr "/Applications/Magpie.app"</code>, then open Magpie again. You only need to do this once per install.</p>
+                <p>That's macOS being careful with apps from outside the App Store. Click <b>Done</b>, then open <b>System Settings → Privacy &amp; Security</b>, scroll down and click <b>Open Anyway</b>. You only need to do this once.</p>
+                <p>If it says Magpie is <b>damaged</b>, you have a version older than 1.2.2. Download the latest one, or open Terminal, run <code>xattr -cr "/Applications/Magpie.app"</code>, then open Magpie again.</p>
               </div>
             </details>
             <details>
