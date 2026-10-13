@@ -133,12 +133,14 @@ h1, h2, h3, .statement p.big {
 
 /* ---------- hero ---------- */
 
+/* Always two lines: "Your design" / "references, sorted." */
+.hero h1 span { display: block; white-space: nowrap; }
+
 .hero { padding: clamp(56px, 10vw, 120px) 0 clamp(40px, 6vw, 72px); text-align: center; }
 .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; border: 1px solid var(--fg); border-radius: 999px; padding: 6px 14px; }
 .hero h1 {
   margin: 28px auto 0;
-  max-width: 13ch;
-  font-size: clamp(48px, 9.4vw, 124px);
+  font-size: clamp(32px, 10.4vw, 124px);
   line-height: 0.95;
 }
 .hero .lede { margin: 28px auto 0; max-width: 34em; font-size: clamp(17px, 1.6vw, 20px); }
@@ -304,6 +306,7 @@ h1, h2, h3, .statement p.big {
   .frame-bar b { display: none; }
   .btn { height: 48px; padding: 0 20px; }
   .site-footer nav { margin-left: 0; }
+  .dl-note code { white-space: normal; overflow-wrap: anywhere; }
 }
 
 .doc code { font: 0.9em ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
