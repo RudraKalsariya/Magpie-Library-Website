@@ -8,6 +8,12 @@
 }
 @font-face {
   font-family: 'Instrument Sans';
+  src: url('/assets/fonts/InstrumentSans-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Instrument Sans';
   src: url('/assets/fonts/InstrumentSans-SemiBold.woff2') format('woff2');
   font-weight: 600;
   font-display: swap;
@@ -231,9 +237,9 @@ h1, h2, .statement p.big {
 .dl:hover { background: var(--fg); color: var(--bg); }
 .dl:hover .btn { background: var(--bg); color: var(--fg); border-color: var(--bg); }
 .dl svg.os { width: 32px; height: 32px; }
-.dl h3 { margin: 0; font-size: 24px; font-weight: 400; letter-spacing: -0.02em; }
+.dl h3 { margin: 0; font-size: 24px; font-weight: 600; letter-spacing: -0.02em; }
 .dl p { margin: 0; font-size: 15px; }
-.dl .btn { margin-top: auto; align-self: flex-start; height: 44px; padding: 0 20px; font-size: 15px; }
+.dl .btn { margin-top: auto; align-self: flex-start; height: 44px; padding: 0 20px; font-size: 15px; font-weight: 500; }
 .dl .tag { align-self: flex-start; font-size: 12px; border: 1px solid currentColor; border-radius: 999px; padding: 2px 10px; }
 .dl.recommended { background: var(--fg); color: var(--bg); }
 .dl.recommended .btn { background: var(--bg); color: var(--fg); border-color: var(--bg); }
