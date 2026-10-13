@@ -16,6 +16,7 @@
 :root {
   --bg: #ffffff;
   --fg: #000000;
+  --display: 'Clash Display', 'Instrument Sans', ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
   --font: 'Instrument Sans', ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
   --wrap: 1180px;
   --gutter: clamp(16px, 4vw, 40px);
@@ -63,11 +64,17 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .skip { position: absolute; left: -9999px; top: 12px; padding: 8px 14px; background: var(--fg); color: var(--bg); border-radius: 999px; z-index: 100; }
 .skip:focus { left: 12px; }
 
+/* ---------- headings ---------- */
+
+h1, h2, h3, .statement p.big {
+  font-family: var(--display);
+  font-weight: 500;
+  letter-spacing: -2px;
+}
+
 /* ---------- logo (inverts with the theme) ---------- */
 
-.logo { width: 28px; height: 28px; flex: none; }
-.logo .plate { fill: var(--fg); }
-.logo .block { fill: var(--bg); }
+.logo { display: block; height: 24px; width: auto; flex: none; }
 
 /* ---------- header ---------- */
 
@@ -133,8 +140,6 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   max-width: 13ch;
   font-size: clamp(48px, 9.4vw, 124px);
   line-height: 0.95;
-  font-weight: 400;
-  letter-spacing: -0.045em;
 }
 .hero .lede { margin: 28px auto 0; max-width: 34em; font-size: clamp(17px, 1.6vw, 20px); }
 .cta { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 36px; }
@@ -167,7 +172,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .section { padding: clamp(72px, 11vw, 140px) 0; border-top: 1px solid var(--fg); }
 .section-head { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 48px; align-items: end; margin-bottom: clamp(40px, 6vw, 64px); }
 .label { font-size: 14px; display: block; margin-bottom: 18px; }
-.section h2 { margin: 0; font-size: clamp(36px, 5.6vw, 72px); line-height: 1; font-weight: 400; letter-spacing: -0.04em; }
+.section h2 { margin: 0; font-size: clamp(36px, 5.6vw, 72px); line-height: 1; }
 .section-head p { margin: 0; max-width: 30em; }
 
 /* Steps */
@@ -175,7 +180,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .step { padding: 28px 28px 8px 0; }
 .step + .step { padding-left: 28px; border-left: 1px solid var(--fg); }
 .step .num { font-size: 14px; }
-.step h3 { margin: 40px 0 10px; font-size: 26px; font-weight: 400; letter-spacing: -0.02em; line-height: 1.15; }
+.step h3 { margin: 40px 0 10px; font-size: 26px; line-height: 1.15; }
 .step p { margin: 0; }
 
 /* Tour (screenshot tabs) */
@@ -193,12 +198,12 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .features { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--fg); border-left: 1px solid var(--fg); }
 .feature { padding: 32px 28px 36px; border-right: 1px solid var(--fg); border-bottom: 1px solid var(--fg); }
 .feature svg { width: 28px; height: 28px; }
-.feature h3 { margin: 36px 0 8px; font-size: 22px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; }
+.feature h3 { margin: 36px 0 8px; font-size: 22px; line-height: 1.2; }
 .feature p { margin: 0; }
 
 /* Privacy statement */
 .statement { padding: clamp(80px, 12vw, 160px) 0; background: var(--fg); color: var(--bg); text-align: center; }
-.statement p.big { margin: 0 auto; max-width: 16ch; font-size: clamp(36px, 6.2vw, 84px); line-height: 1; letter-spacing: -0.04em; }
+.statement p.big { margin: 0 auto; max-width: 16ch; font-size: clamp(36px, 6.2vw, 84px); line-height: 1; }
 .statement p.small { margin: 28px auto 0; max-width: 34em; }
 .statement a { text-decoration: underline; text-underline-offset: 4px; }
 
@@ -216,7 +221,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .dl:hover { background: var(--fg); color: var(--bg); }
 .dl:hover .btn { background: var(--bg); color: var(--fg); border-color: var(--bg); }
 .dl svg.os { width: 32px; height: 32px; }
-.dl h3 { margin: 0; font-size: 24px; font-weight: 400; letter-spacing: -0.02em; }
+.dl h3 { margin: 0; font-size: 24px; }
 .dl p { margin: 0; font-size: 15px; }
 .dl .btn { margin-top: auto; align-self: flex-start; height: 44px; padding: 0 20px; font-size: 15px; }
 .dl .tag { align-self: flex-start; font-size: 12px; border: 1px solid currentColor; border-radius: 999px; padding: 2px 10px; }
@@ -260,9 +265,9 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 /* Plain text pages (privacy, support) */
 .doc { padding: clamp(56px, 9vw, 110px) 0 100px; }
 .doc .wrap { max-width: 760px; }
-.doc h1 { margin: 0 0 12px; font-size: clamp(40px, 6vw, 72px); font-weight: 400; letter-spacing: -0.04em; line-height: 1; }
+.doc h1 { margin: 0 0 12px; font-size: clamp(40px, 6vw, 72px); line-height: 1; }
 .doc .meta { margin: 0 0 48px; font-size: 15px; }
-.doc h2 { margin: 48px 0 12px; font-size: 24px; font-weight: 700; letter-spacing: -0.01em; }
+.doc h2 { margin: 48px 0 12px; font-size: 24px; }
 .doc p, .doc li { max-width: 40em; }
 .doc ul { padding-left: 20px; }
 .doc a { text-decoration: underline; text-underline-offset: 3px; }

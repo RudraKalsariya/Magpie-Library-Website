@@ -53,4 +53,6 @@ npx serve .
 
 ## Credits
 
-The typeface is [Instrument Sans](https://github.com/Instrument/instrument-sans), under the SIL Open Font License (`assets/fonts/OFL.txt`).
+Headings use [Clash Display](https://www.fontshare.com/fonts/clash-display) Medium by the Indian Type Foundry, loaded from Fontshare under its free font licence. Body text uses [Instrument Sans](https://github.com/Instrument/instrument-sans), self-hosted under the SIL Open Font License (`assets/fonts/OFL.txt`).
+
+The logo files are in `assets/img/`: `logo.svg` (black wordmark), `logo-white.svg` and `mark.svg` (the symbol on its own).
