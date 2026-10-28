@@ -6,6 +6,10 @@ const CONFIG = {
   releasesRepo: 'RudraKalsariya/-Storing-Design-Library',
   // Magpie's page in the Microsoft Store.
   storeUrl: 'https://apps.microsoft.com/search?query=Magpie%20Library',
+  // The newest version when this page was last updated. The buttons link
+  // straight to its installers, and the page swaps in anything newer it finds
+  // on GitHub. Update this (and the links in index.html) with each release.
+  version: '1.3.0',
 };
 
 const root = document.documentElement;
@@ -47,12 +51,12 @@ onScroll();
 
 /* ---------- downloads ---------- */
 
-const releasesPage = `https://github.com/${CONFIG.releasesRepo}/releases/latest`;
+const download = (suffix) => `https://github.com/${CONFIG.releasesRepo}/releases/download/v${CONFIG.version}/Magpie-${CONFIG.version}-${suffix}`;
 const links = {
   store: CONFIG.storeUrl,
-  win: releasesPage,
-  macArm: releasesPage,
-  macIntel: releasesPage,
+  win: download('win-x64.exe'),
+  macArm: download('mac-arm64.dmg'),
+  macIntel: download('mac-x64.dmg'),
 };
 
 function applyLinks() {
@@ -63,7 +67,7 @@ function applyLinks() {
 }
 
 // Fill in direct links to the newest installers. If GitHub can't be reached,
-// every button still goes to the releases page.
+// the buttons keep pointing at CONFIG.version's installers.
 async function loadLatestRelease() {
   applyLinks();
   try {
